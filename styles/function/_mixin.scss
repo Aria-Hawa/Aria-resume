@@ -1,0 +1,61 @@
+@use '../variables/' as *;
+
+@mixin bordered-left ($width: 5px, $color: map-get($color, dark)) {
+    border-left: $width solid $color;
+}
+
+@mixin bordered ($width: 5px, $color: map-get($color, primary)) {
+    border: $width solid $color;
+}
+
+@mixin mask {
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+}
+
+@mixin multiple-ellipsis ($line-clamp) {
+    // 多行省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line-clamp;
+}
+
+@mixin single-ellipsis {
+    // 單行省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin basic-btn {
+    background-color: map-get($color, light);
+    color: map-get($color, deep);
+    font-size: map-get($font-size, xl);
+    font-weight: 600;
+    padding: $interval-m $interval-xxl;
+    border-radius: $radius-full;
+    @include bordered($color: transparent);
+    transition: $basic-speed;
+
+    &:hover {
+        background-color: map-get($color, dark);
+        color: map-get($color, light);
+        @include bordered($color: map-get($color, light));
+    }
+}
+
+@mixin big-title {
+    font-size: 3.5rem;
+    line-height: 80px;
+    color: map-get($color, secondary1);
+    margin-bottom: 40px;
+}
+
+@mixin basic-content {
+    font-size: 24px;
+    margin: 0 0 40px 40px;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria Li</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/index.min.css">
+</head>
+
+<body>
+    <svg style="display: none;">
+        <!-- <use href="#weui--arrow-filled"></use> -->
+        <symbol id="weui--arrow-filled" viewBox="-6 0 24 24">
+            <path fill="#f2f4f6" fill-rule="evenodd"
+                d="M10.157 12.711L4.5 18.368l-1.414-1.414l4.95-4.95l-4.95-4.95L4.5 5.64l5.657 5.657a1 1 0 0 1 0 1.414" />
+        </symbol>
+        <!-- <use href="#material-symbols--mail-outline" /> -->
+        <symbol id="material-symbols--mail-outline" viewBox="0 0 24 24">
+            <path fill="#f2f4f6"
+                d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
+        </symbol>
+        <!-- <use href="#mdi--github" /> -->
+        <symbol id="mdi--github" viewBox="0 0 24 24">
+            <path fill="#f2f4f6"
+                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+        </symbol>
+        <!-- <use href="#fa--phone" /> -->
+        <symbol id="fa--phone" viewBox="0 0 1408 1408">
+            <path fill="#f2f4f6"
+                d="M1408 1112q0 27-10 70.5t-21 68.5q-21 50-122 106q-94 51-186 51q-27 0-53-3.5t-57.5-12.5t-47-14.5T856 1357t-49-18q-98-35-175-83q-127-79-264-216T152 776q-48-77-83-175q-3-9-18-49t-20.5-55.5t-14.5-47T3.5 392T0 339q0-92 51-186Q107 52 157 31q25-11 68.5-21T296 0q14 0 21 3q18 6 53 76q11 19 30 54t35 63.5t31 53.5q3 4 17.5 25t21.5 35.5t7 28.5q0 20-28.5 50t-62 55t-62 53t-28.5 46q0 9 5 22.5t8.5 20.5t14 24t11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14t20.5 8.5t22.5 5q18 0 46-28.5t53-62t55-62t50-28.5q14 0 28.5 7t35.5 21.5t25 17.5q25 15 53.5 31t63.5 35t54 30q70 35 76 53q3 7 3 21" />
+        </symbol>
+    </svg>
+    <header>
+        <div id="logo">
+            <img src="./images/logo-V2.svg" alt="Aria">
+        </div>
+        <nav aria-label="網站導覽列">
+            <ul id="navbar">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Home">
+            <div id="hello">
+                <img src="./images/home-background.png" alt="Aria">
+                <h1>你好! <br>我是Aria Li，是一名前端開發者</h1>
+            </div>
+            <div id="about">
+                <h2 class="title">About Me</h2>
+                <p class="content">嗨~ 我是一位對前端開發充滿熱忱的人。<br>
+                    我擁有卓越的學習能力和執行力，且享受挑戰，並致力於將所學應用於實務中，與團隊共同成長，創造更多價值。期待與您一同探索前端技術的無限可能！</p>
+            </div>
+        </section>
+        <section id="Experience">
+            <h2 class="title">Experience</h2>
+            <div class="content">
+                <p class="verticalTxt">前端轉職歷程</p>
+                <ul>
+                    <li class="timeList">Now! 持續學習與精進中
+                        <div class="hide">
+                            <br>
+                            <ul>
+                                <li>結訓後，持續學習新技術，加入side project累積經驗。</li>
+                            </ul>
+                        </div>
+                        <div class="spot"></div>
+                    </li>
+                    <li class="timeList">專案實作與成長
+                        <div class="hide">
+                            <br>
+                            <ul class="needStyle">
+                                <li>團體專案「客製化球衣網站」，從零開始學習前端技術，成功實現客製化功能，並在專題競賽中<strong>榮獲第一名</strong>。</li>
+                                <li>個人專案「虛擬音樂人互動網站」中，我運用GSAP和jQuery等技術，打造獨特的互動體驗</li>
+                            </ul>
+                        </div>
+                        <div class="spot"></div>
+                    </li>
+                    <li class="timeList">前端開發密集訓練
+                        <div class="hide">
+                            <br>
+                            <ul>
+                                <li>參與為期三個月的前端開發實務班密集訓練課程，快速掌握前端開發技能，並展現卓越的學習能力和專案執行力。</li>
+                            </ul>
+                        </div>
+                        <div class="spot"></div>
+                    </li>
+                    <li class="timeList">非資訊背景轉職
+                        <div class="hide">
+                            <br>
+                            <ul>
+                                <li>我畢業於國立台灣海洋大學航運管理學系，但對前端開發充滿熱情，因此決心轉職前端工程師。</li>
+                            </ul>
+                        </div>
+                        <div class="spot"></div>
+                    </li>
+                    <li class="timeList">富動科技股份有限公司 <small>生管/物管</small>
+                        <div class="hide">
+                            <br>
+                            <ul class="needStyle">
+                                <li>負責生產排程與物料控管, 確保生產效率最大化</li>
+                                <li>新ERP系統導入之種子成員,接受訓練並教學同仁</li>
+                            </ul>
+                        </div>
+                        <div class="spot"></div>
+                    </li>
+                    <li class="timeList">國立臺灣海洋大學畢業
+                        <div class="hide">
+                            <br>
+                            <span>※ 進修學士班航運管理系航管組第二名畢業
+                                <br>
+                                ※ 獲邀赴美參加「福爾摩沙衛星七號發射觀禮活動」
+                            </span>
+                            <span>總務處事務組工讀經驗:</span>
+                            <ul class="needStyle">
+                                <li>學校總機電話接聽</li>
+                                <li>收發公文, 檔案收納管理, 會議室服務, 其餘交辦事項</li>
+                            </ul>
+                        </div>
+                        <div class="spot"></div>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="title">Skills</h3>
+            <div id="skills" class="content">
+                <div class="card">
+                    <h4>前端技術</h4>
+                    <ul>
+                        <li class="needStyle">React</li>
+                        <li class="needStyle">JavaScript</li>
+                        <li class="needStyle">RWD</li>
+                        <li class="needStyle">SCSS</li>
+                        <li class="needStyle">HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>互動設計</h4>
+                    <ul>
+                        <li class="needStyle">GSAP</li>
+                        <li class="needStyle">jQuery UI</li>
+                        <li class="needStyle">Swiper API</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>工具</h4>
+                    <ul>
+                        <li class="needStyle">GitHub</li>
+                        <li class="needStyle">Figma</li>
+                        <li class="needStyle">Inkscape</li>
+                        <li class="needStyle">ProtoPie</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section id="Projects">
+            <h2 class="title">Projects</h2>
+            <div id="project-1" class="projects-box">
+                <h3 class="sz-caption">客製化球衣網站</h3>
+                <div class="sz-hashtag">
+                    <span>#挑戰自我</span>
+                    <span>#自主學習</span>
+                    <span>#夢想啟程</span>
+                </div>
+                <figure>
+                    <img src="./images/jersey.gif" alt="">
+                    <div class="rise">
+                        <a href="https://aria-hawa.github.io/customizeJersey/index.html" target="_blank">Demo</a>
+                        <a href="https://github.com/Aria-Hawa/customizeJersey" target="_blank">Code</a>
+                    </div>
+                </figure>
+                <div class="showDetail">
+                    <h3 class="caption">客製化球衣網站</h3>
+                    <div class="hashtag">
+                        <span>#挑戰自我</span>
+                        <span>#自主學習</span>
+                        <span>#夢想啟程</span>
+                    </div>
+                    <div class="describe">
+                        <div class="subtitle">
+                            <span>技術說明</span>
+                            <svg>
+                                <use href="#weui--arrow-filled" />
+                            </svg>
+                        </div>
+                        <ul class="collapse">
+                            <li class="needStyle">本專案初期以 jQuery 為主要技術，因應課程進度。</li>
+                            <li class="needStyle">專案後期導入 React，將重複性高的元件進行 React 元件化，以提升程式碼的重用性和維護性。</li>
+                        </ul>
+                    </div>
+                    <div class="describe">
+                        <div class="subtitle">
+                            <span>網站功能</span>
+                            <svg>
+                                <use href="#weui--arrow-filled" />
+                            </svg>
+                        </div>
+                        <ul class="collapse">
+                            <li class="needStyle">玩轉色彩！衣服顏色隨你變！</li>
+                            <li class="needStyle">字體大小、位置，客製化你的專屬風格！</li>
+                            <li class="needStyle">上傳獨家Logo，讓設計更有個性！</li>
+                            <li class="needStyle">專案隨時隨存，下單超Easy！</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            <div id="project-2" class="projects-box">
+                <figure>
+                    <img src="./images/evelyn.gif" alt="互動式音樂人網站縮圖">
+                    <div class="rise">
+                        <a href="https://aria-hawa.github.io/Evelyn-Music-Web/" target="_blank">Demo</a>
+                        <a href="https://github.com/Aria-Hawa/Evelyn-Music-Web" target="_blank">Code</a>
+                    </div>
+                </figure>
+                <div class="showDetail">
+                    <h3 class="caption">互動式音樂人作品網站</h3>
+                    <div class="hashtag">
+                        <span>#個人作品</span>
+                        <span>#互動網站</span>
+                        <span>#虛擬音樂人</span>
+                    </div>
+                    <div class="describe">
+                        <div class="subtitle">
+                            <span>技術說明</span>
+                            <svg>
+                                <use href="#weui--arrow-filled" />
+                            </svg>
+                        </div>
+                        <ul class="collapse">
+                            <li class="needStyle">使用 GSAP 實現流暢的唱片拖曳和動畫效果，帶來沉浸式體驗。</li>
+                            <li class="needStyle">使用 jQuery 處理互動事件，讓操作更直覺有趣。</li>
+                            <li class="needStyle">JavaScript 控制音樂播放，無縫切換不同音樂作品。</li>
+                        </ul>
+                    </div>
+                    <div class="describe">
+                        <div class="subtitle">
+                            <span>網站功能</span>
+                            <svg>
+                                <use href="#weui--arrow-filled" />
+                            </svg>
+                        </div>
+                        <ul class="collapse">
+                            <li class="needStyle">互動式唱片機，讓你親手操控音樂!</li>
+                            <li class="needStyle">拖曳唱片，播放網路免費的精選音樂！</li>
+                            <li class="needStyle">上傳獨家Logo，讓設計更有個性！</li>
+                            <li class="needStyle">透過網站，探索 Evelyn 的音樂故事和個人風格!</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <h2 class="title">Contact</h2>
+            <div>
+                <div id="phone" class="copyMe" title="0926-848-885">
+                    <svg>
+                        <use href="#fa--phone" />
+                    </svg>
+                    <p>Copied!</p>
+                </div>
+                <div id="email" class="copyMe" title="shigototravailler@gmail.com">
+                    <svg>
+                        <use href="#material-symbols--mail-outline" />
+                    </svg>
+                    <p>Copied!</p>
+                </div>
+                <a href="https://github.com/Aria-Hawa" id="github" title="Aria-Hawa" target="_blank">
+                    <svg>
+                        <use href="#mdi--github" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 使用jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,550 @@
+@use 'reset';
+@use 'variables' as *;
+@use 'function' as *;
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+
+
+
+.title {
+    @include big-title;
+}
+
+.content {
+    @include basic-content;
+}
+
+.needStyle {
+    list-style-type: disc;
+}
+
+body {
+    font-family: $font-family;
+    color: map-get($color, light);
+    background-color: map-get($color, primary);
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        section {
+            width: 80%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            // anchor錨點位置避開header
+            scroll-margin-top: 80px;
+        }
+    }
+
+
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: map-get($color, primary);
+    border-bottom: 1px solid map-get($color, light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    position: fixed;
+    z-index: 999;
+
+
+    #logo {
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 50%;
+            width: auto;
+        }
+    }
+
+    #navbar {
+        width: fit-content;
+        height: 100%;
+        font-size: map-get($font-size, l);
+        display: flex;
+        align-items: center;
+
+        li {
+            margin: 0 20px 0 20px;
+
+            a {
+                transition: color 0.2s ease-in-out;
+            }
+
+            &:hover a {
+                color: map-get($color, secondary1);
+            }
+
+            &:active a {
+                color: map-get($color, secondary2);
+            }
+        }
+    }
+}
+
+#Home {
+    margin-top: 80px;
+
+    #hello {
+        width: 100%;
+        height: calc(100vh - 160px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); //使元件置中
+            width: 100%;
+            height: auto;
+            opacity: 0.4;
+        }
+
+        h1 {
+            color: map-get($color, light);
+            font-size: 3rem;
+        }
+    }
+}
+
+#Experience {
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .verticalTxt {
+            writing-mode: vertical-rl;
+            margin-right: 40px;
+            text-align: start;
+            letter-spacing: 16px;
+        }
+
+        >ul {
+            border-left: 2px solid map-get($color, a-light);
+            width: 100%;
+
+            .timeList {
+                margin: 0px 0px 60px 40px;
+                padding: 16px;
+                border: 2px solid map-get($color, secondary1);
+                position: relative;
+                opacity: 0.7;
+                transition: all 0.3s ease-in-out;
+
+                &::after {
+                    content: '';
+                    width: 0px;
+                    height: 0px;
+                    border-width: 11px;
+                    border-style: solid;
+                    /* 上、右、下、左 */
+                    border-color: transparent map-get($color, primary) transparent transparent;
+                    position: absolute;
+                    right: 99.8%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &::before {
+                    content: '';
+                    width: 0px;
+                    height: 0px;
+                    border-width: 14px;
+                    border-style: solid;
+                    /* 加上這行，確保邊框樣式是實線 */
+                    border-color: transparent map-get($color, secondary1) transparent transparent;
+                    /* 上、右、下、左 */
+                    position: absolute;
+                    right: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    /* 讓偽元素垂直置中 */
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+
+                &.beClick {
+                    opacity: 1;
+                }
+
+                .hide {
+                    display: none;
+
+                    ul {
+                        font-size: 1.25rem;
+                        padding: 0 0 0 40px;
+
+                        li {
+                            margin: 0 0 16px 0;
+
+                            strong {
+                                color: map-get($color, secondary1);
+                            }
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        padding: 0 0 20px 20px;
+                        font-size: 20px
+                    }
+                }
+
+                .spot {
+                    position: absolute;
+                    top: 50%;
+                    left: -43px;
+                    transform: translate(-50%, -50%) scale(1);
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: map-get($color, secondary1);
+                }
+            }
+        }
+    }
+
+    #skills {
+        display: flex;
+        justify-content: center;
+
+        .card {
+            width: 30%;
+            flex-grow: 1;
+            height: auto;
+            margin: 0 40px 0 0;
+            padding: 20px;
+            border: 1px solid map-get($color, secondary1);
+            border-radius: 5%;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            h4 {
+                margin-bottom: 20px;
+            }
+
+            ul {
+                font-size: 1.25rem;
+
+                li {
+                    margin-left: 40px;
+                }
+            }
+        }
+
+    }
+}
+
+#Projects {
+    .projects-box {
+        display: flex;
+        margin-bottom: 40px;
+
+        .sz-caption {
+            display: none;
+        }
+
+        .sz-hashtag {
+            display: none;
+        }
+
+        figure {
+            width: 60%;
+            height: fit-content;
+            margin-right: 40px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .rise {
+                position: absolute;
+                width: 100%;
+                height: 0%;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: map-get($color, a-black);
+                transition: height 0.5s ease-in-out;
+
+                a {
+                    width: 100px;
+                    height: 60px;
+                    font-size: 2rem;
+                    line-height: 60px;
+                    text-align: center;
+                    border: 2px solid map-get($color, light);
+                    border-radius: 10px;
+                    visibility: hidden;
+                    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+
+                    &:hover {
+                        border: 2px solid map-get($color, secondary1);
+                        color: map-get($color, secondary1);
+                    }
+                }
+            }
+
+            &:hover {
+                .rise {
+                    height: 80%;
+                }
+
+                a {
+                    visibility: visible;
+                    transition: visibility 0.3s 0.2s ease-in-out;
+                }
+
+            }
+        }
+
+        .showDetail {
+            width: calc(40% - 40px);
+            height: fit-content;
+
+            .caption {
+                font-size: 2rem;
+            }
+
+
+            .describe {
+                border: 1px solid map-get($color, light);
+                padding: 8px;
+                margin: 16px 0;
+                transition: background-color 0.3s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: map-get($color, secondary3);
+                }
+
+                .subtitle {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    opacity: .7;
+                    transition: opacity 0.3s ease-in-out;
+
+                    &.rotate {
+                        opacity: 1;
+
+                        svg {
+                            transform: rotate(270deg);
+                        }
+                    }
+
+                    span {
+                        font-size: 1.5rem;
+                    }
+
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                        transform: rotate(90deg);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+                .collapse {
+                    font-size: 1.25rem;
+                    padding-top: 8px;
+                    display: none;
+
+                    li {
+                        margin: 0 0 16px 40px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+#Contact {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 40px;
+    padding: 0 80px;
+    border-top: 1px solid map-get($color, light);
+    text-align: center;
+
+    >div {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            margin: 0 40px 0 0;
+            position: relative;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            p {
+                position: absolute;
+                padding: 4px;
+                top: -100%;
+                right: 50%;
+                transform: translate(50%, 50%);
+                transition: all .5s ease-in;
+                opacity: 0;
+            }
+        }
+
+        #phone {
+            svg {
+                width: 28px;
+            }
+        }
+
+        svg {
+            width: 36px;
+            height: 36px;
+            opacity: 0.7;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+}
+
+/* 中型設備(平板) =>此設定820以下(抓ipad Air尺寸) */
+@media (max-width:820px) {
+    body main section {
+        width: 90%;
+    }
+
+    .content {
+        margin: 0 0 40px 0;
+    }
+
+    #Experience {
+        .content {
+            ul {
+                .timeList {
+                    font-size: 1.25rem;
+
+                    .hide {
+                        font-size: 1.5rem;
+
+                        ul {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        #skills {
+            overflow: scroll;
+            justify-content: flex-start;
+            scrollbar-width: none;
+
+            .card {
+                width: fit-content;
+
+                h4 {
+                    font-size: 1.25rem;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    font-size: 1.25rem;
+
+                    li {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    #Projects {
+        .projects-box {
+            flex-direction: column;
+
+            figure {
+                width: 100%;
+            }
+
+            .sz-caption {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            .sz-hashtag {
+                display: block;
+                margin-bottom: 16px;
+            }
+
+            .showDetail {
+                width: 100%;
+
+                .caption {
+                    display: none;
+                }
+
+                .hashtag  {
+                    display: none;
+                }
+
+                .describe {
+                    .subtitle {
+                        span {
+                            font-size: 1.25rem;
+                        }
+                    }
+
+                    .collapse {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* 小型設備(手機) =>此設定640以下 */
+@media (max-width:640px) {}

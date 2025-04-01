@@ -1,0 +1,11 @@
+// 字體規範
+$font-family: "LXGW WenKai Mono TC", monospace;
+
+// 字級規範 => map-get($font-size, )
+$font-size: (
+    s: .8rem,
+    m: 1rem,
+    l: 1.5rem,
+    xl: 2rem,
+    xxl: 11rem,
+);  

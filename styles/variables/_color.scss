@@ -1,0 +1,61 @@
+// 群組map => 呼叫map-get($變數名稱, 屬性)
+// 色彩規範 => map-get($color, )
+$color: (
+    // 灰階
+    dark: #070707,
+    deep: #1a1a1a,
+    deepgrey: #302f2f,
+    light: #f2f4f6,
+
+    // 主色調
+    primary: #023047,
+
+    // 輔助
+    secondary1: #ffb703,
+    secondary2: #fc9701,
+    secondary3: #2c5f77,
+
+    // 標記
+    mark: greenyellow,
+
+    // 透明
+    a-secondary1:rgba(255, 183, 3, .7),
+    a-light: rgba(242, 244, 246, .7),
+    a-black: rgba(1, 1, 1, 0.7),
+
+);
+
+
+// record色彩規範=> map-get($recordColor, )
+$recordColor: (
+    // 主色調
+    primary1: #DE9959,
+    primary2: #2C5ECA,
+    primary3: #9586D6,
+    primary4: #DD5746,
+
+    // 輔助
+    secondary1: #EAE8FA,
+    secondary2: #E9E9E9,
+    secondary3:#fbdbb5,
+    secondary4:#FFE0A2,
+
+    // 灰階
+    lightgray: #EDEDED,
+
+);
+
+
+
+// 漸層
+// 數列(中間有逗號)就不能加入map裡面，要獨立一個變數
+$gradient-y-p: #fffdd6 0%, #eb99d2 100%;
+$gradient-w8-a8: rgba(255, 255, 255, 0.8), rgba(220, 185, 185, .8);
+
+// 陰影
+$box-shadow-g: 2px 2px 3px map-get($color, dark);
+$box-shadow-mark: 8px 8px 0 map-get($color, mark);
+
+// 透明度
+$purple-a3: rgba(126, 122, 155, .3);
+$black-a3: rgba(17, 17, 17, .3);

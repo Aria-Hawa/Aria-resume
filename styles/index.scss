@@ -50,22 +50,51 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px 0 40px;
+    padding: 0px 40px;
     position: fixed;
     z-index: 999;
 
-
-    #logo {
-        width: fit-content;
-        height: 100%;
+    #topBtn {
+        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: space-between;
 
-        img {
-            height: 50%;
-            width: auto;
+        #logo {
+            width: fit-content;
+            height: 80px;
+            padding: 16px 0;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        .hamburger {
+            background-color: transparent;
+            border: none;
+            display: none;
+
+            .bar {
+                display: block;
+                /*span預設是inline,不支援寬高 */
+                width: 25px;
+                height: 3px;
+                background-color: map-get($color, light);
+                margin: 5px auto;
+                /* 左右auto就會置中 */
+                transition: 0.35s;
+            }
         }
     }
+
 
     #navbar {
         width: fit-content;
@@ -90,6 +119,8 @@ header {
             }
         }
     }
+
+
 }
 
 #Home {
@@ -247,6 +278,7 @@ header {
 
                 li {
                     margin-left: 40px;
+                    white-space: nowrap;
                 }
             }
         }
@@ -453,6 +485,53 @@ header {
         width: 90%;
     }
 
+    header {
+        height: 80px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+
+        &.show {
+            height: 245px;
+        }
+
+        #topBtn {
+            #logo {
+                width: 24%;
+            }
+
+            .hamburger {
+                display: block;
+
+                &.is-active {
+                    .bar:nth-child(1) {
+                        transform: rotate(45deg) translateY(11px);
+                    }
+
+                    .bar:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    .bar:nth-child(3) {
+                        transform: rotate(-45deg) translateY(-12px);
+                    }
+                }
+            }
+        }
+
+        #navbar {
+            width: fit-content;
+            height: fit-content;
+            padding: 0 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
     .content {
         margin: 0 0 40px 0;
     }
@@ -525,7 +604,7 @@ header {
                     display: none;
                 }
 
-                .hashtag  {
+                .hashtag {
                     display: none;
                 }
 
@@ -545,6 +624,3 @@ header {
     }
 
 }
-
-/* 小型設備(手機) =>此設定640以下 */
-@media (max-width:640px) {}

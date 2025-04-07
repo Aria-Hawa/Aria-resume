@@ -392,6 +392,9 @@ header #navbar li:active a {
 #Projects .projects-box .showDetail .describe .collapse li {
   margin: 0 0 16px 40px;
 }
+#Projects #project-3 figure img {
+  border: 1px solid #f2f4f6;
+}
 
 #Contact {
   display: block;

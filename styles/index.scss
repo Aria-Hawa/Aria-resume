@@ -417,6 +417,14 @@ header {
         }
 
     }
+
+    #project-3 {
+        figure {
+            img {
+                border: 1px solid map-get($color, light);
+            }
+        }
+    }
 }
 
 #Contact {
